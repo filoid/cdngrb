@@ -6,15 +6,7 @@ if (top != self) {
 		top.location.replace(self.location.protocol + '//' + self.location.host + self.location.pathname);
 	}
 }
-function pr(percent, received, speed) {
-	document.getElementById('received').innerHTML = '<b>' + received + '</b>';
-	document.getElementById('percent').innerHTML = '<b>' + percent + '%</b>';
-	document.getElementById('progress').innerHTML = '<b>' + percent + '%</b>';
-	document.getElementById('progress').style.width = percent + '%';
-	document.getElementById('speed').innerHTML = '<b>' + speed + ' KB/s</b>';
-	document.title = percent + '% Downloaded';
-	return true;
-}
+
 function new_transload_window() {
 	var tmp = (new Date()).getTime();
 	$('form[name=transload]').attr('target', 'rapidleech_' + tmp);
